@@ -88,6 +88,17 @@ function Index() {
           </div>
           <h1 className="birthday-title text-6xl md:text-7xl">Happy Birthday</h1>
           <p className="birthday-title-serif mt-4 text-3xl md:text-4xl italic">babe</p>
+
+          {/* Poem */}
+          <div className="poem-box mt-8">
+            <p className="poem-line">Roses are red, violets are blue,</p>
+            <p className="poem-line">No one in this world is as beautiful as you.</p>
+            <p className="poem-line">Your smile lights up my darkest days,</p>
+            <p className="poem-line">And I fall for you in a million ways.</p>
+            <p className="poem-line mt-4">Today is yours, my queen, my world,</p>
+            <p className="poem-line">My forever girl, my precious pearl.</p>
+          </div>
+
           <p className="mt-6 text-lg text-rose-700 font-medium">
             I love you more than words could ever say
           </p>
