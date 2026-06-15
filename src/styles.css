@@ -132,6 +132,8 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap');
+
 @layer base {
   * {
     border-color: var(--color-border);
@@ -140,5 +142,87 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: 'Quicksand', system-ui, sans-serif;
   }
+}
+
+.party-bg {
+  background: linear-gradient(135deg, #ff9ec7 0%, #ffb8e0 25%, #c5a3ff 55%, #ffd1dc 80%, #ffe0f0 100%);
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
+}
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.birthday-title {
+  font-family: 'Pacifico', cursive;
+  background: linear-gradient(90deg, #fff, #ffe6f3, #fff8c4, #fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 4px 20px rgba(255, 105, 180, 0.4);
+  line-height: 1.1;
+}
+
+.btn-yes {
+  padding: 1rem 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #ff5ea0, #ff85c0, #c084fc);
+  border-radius: 9999px;
+  box-shadow: 0 10px 30px -8px rgba(255, 94, 160, 0.7), inset 0 -4px 0 rgba(0,0,0,0.1);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  cursor: pointer;
+  border: 3px solid #fff;
+}
+.btn-yes:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 15px 40px -8px rgba(255, 94, 160, 0.9);
+}
+
+.btn-no {
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #b8348a;
+  background: rgba(255,255,255,0.85);
+  border-radius: 9999px;
+  border: 2px dashed #ff9ec7;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+
+.floaty { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.floaty span {
+  position: absolute;
+  bottom: -50px;
+  font-size: 2rem;
+  animation: floatUp linear infinite;
+  opacity: 0.85;
+}
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0); opacity: 0; }
+  10% { opacity: 0.9; }
+  100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+.confetti { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.confetti span {
+  position: absolute;
+  top: -10px;
+  width: 10px;
+  height: 18px;
+  background: #ff5ea0;
+  animation: fall 4s linear infinite;
+}
+.confetti span:nth-child(odd) { background: #c084fc; }
+.confetti span:nth-child(3n) { background: #fde047; }
+.confetti span:nth-child(5n) { background: #5eead4; }
+.confetti span:nth-child(7n) { background: #ff85c0; }
+@keyframes fall {
+  0% { transform: translateY(-20vh) rotate(0); }
+  100% { transform: translateY(110vh) rotate(720deg); }
 }
