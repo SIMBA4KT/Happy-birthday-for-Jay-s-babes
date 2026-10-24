@@ -78,23 +78,46 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Happy birthay Sierra" },
-      { name: "description", content: "A vibrant, interactive website designed for surprise birthday celebrations, featuring playful elements and engaging questions." },
+      {
+        name: "description",
+        content:
+          "A vibrant, interactive website designed for surprise birthday celebrations, featuring playful elements and engaging questions.",
+      },
       { name: "author", content: "Lovable" },
       { property: "og:title", content: "Happy birthay Sierra" },
-      { property: "og:description", content: "A vibrant, interactive website designed for surprise birthday celebrations, featuring playful elements and engaging questions." },
+      {
+        property: "og:description",
+        content:
+          "A vibrant, interactive website designed for surprise birthday celebrations, featuring playful elements and engaging questions.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Happy birthay Sierra" },
-      { name: "twitter:description", content: "A vibrant, interactive website designed for surprise birthday celebrations, featuring playful elements and engaging questions." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/15e4cadd-aa4a-4eef-a37c-e3b8c4d437ed/id-preview-a0ef384a--ac47b062-aaaa-46a7-bec0-d39c3767c7e5.lovable.app-1781523442085.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/15e4cadd-aa4a-4eef-a37c-e3b8c4d437ed/id-preview-a0ef384a--ac47b062-aaaa-46a7-bec0-d39c3767c7e5.lovable.app-1781523442085.png" },
+      {
+        name: "twitter:description",
+        content:
+          "A vibrant, interactive website designed for surprise birthday celebrations, featuring playful elements and engaging questions.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/15e4cadd-aa4a-4eef-a37c-e3b8c4d437ed/id-preview-a0ef384a--ac47b062-aaaa-46a7-bec0-d39c3767c7e5.lovable.app-1781523442085.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/15e4cadd-aa4a-4eef-a37c-e3b8c4d437ed/id-preview-a0ef384a--ac47b062-aaaa-46a7-bec0-d39c3767c7e5.lovable.app-1781523442085.png",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,

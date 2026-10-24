@@ -26,7 +26,7 @@ const QUESTIONS: Question[] = [
   { q: "Do you deserve all the love in the universe?", yes: "Yes I do", no: "Not really" },
   { q: "Am I the luckiest person to have you?", yes: "Yes you are", no: "Nah" },
   { q: "Ready for your birthday surprise, babe?", yes: "Yes please!!", no: "Later" },
-  { q: "Will you fuck me, babe?", yes: "Yes", no: "No never", forced: true },
+  { q: "Will you give me a chance one day?", yes: "Yes", no: "No never", forced: true },
 ];
 
 function HeartIcon({ className = "" }: { className?: string }) {
@@ -78,7 +78,14 @@ function Index() {
         <div className="bokeh" aria-hidden />
         <div className="confetti" aria-hidden>
           {Array.from({ length: 60 }).map((_, i) => (
-            <span key={i} style={{ left: `${(i / 60) * 100}%`, animationDelay: `${(i % 10) * 0.2}s`, animationDuration: `${3 + (i % 4)}s` }} />
+            <span
+              key={i}
+              style={{
+                left: `${(i / 60) * 100}%`,
+                animationDelay: `${(i % 10) * 0.2}s`,
+                animationDuration: `${3 + (i % 4)}s`,
+              }}
+            />
           ))}
         </div>
 
@@ -105,7 +112,13 @@ function Index() {
           <p className="mt-3 text-sm text-rose-500/80">
             Today is all about you. Get ready for the best day ever.
           </p>
-          <div className="mt-8 flex justify-center"><div className="dot-trio"><span /><span /><span /></div></div>
+          <div className="mt-8 flex justify-center">
+            <div className="dot-trio">
+              <span />
+              <span />
+              <span />
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -120,22 +133,58 @@ function Index() {
       <div className="bokeh" aria-hidden />
 
       {/* Decorative hearts */}
-      <div className="heart-deco" style={{ top: "8%", left: "8%", "--r": "-15deg", "--o": "0.18" } as CSSProperties}>
+      <div
+        className="heart-deco"
+        style={{ top: "8%", left: "8%", "--r": "-15deg", "--o": "0.18" } as CSSProperties}
+      >
         <HeartIcon className="w-14 h-14" />
       </div>
-      <div className="heart-deco" style={{ bottom: "12%", right: "8%", "--r": "25deg", "--o": "0.12", animationDelay: "1s" } as CSSProperties}>
+      <div
+        className="heart-deco"
+        style={
+          {
+            bottom: "12%",
+            right: "8%",
+            "--r": "25deg",
+            "--o": "0.12",
+            animationDelay: "1s",
+          } as CSSProperties
+        }
+      >
         <HeartIcon className="w-24 h-24" />
       </div>
-      <div className="heart-deco" style={{ top: "18%", right: "14%", "--r": "10deg", "--o": "0.15", animationDelay: "2s" } as CSSProperties}>
+      <div
+        className="heart-deco"
+        style={
+          {
+            top: "18%",
+            right: "14%",
+            "--r": "10deg",
+            "--o": "0.15",
+            animationDelay: "2s",
+          } as CSSProperties
+        }
+      >
         <HeartIcon className="w-8 h-8" />
       </div>
-      <div className="heart-deco" style={{ bottom: "22%", left: "10%", "--r": "-20deg", "--o": "0.13", animationDelay: "1.5s" } as CSSProperties}>
+      <div
+        className="heart-deco"
+        style={
+          {
+            bottom: "22%",
+            left: "10%",
+            "--r": "-20deg",
+            "--o": "0.13",
+            animationDelay: "1.5s",
+          } as CSSProperties
+        }
+      >
         <HeartIcon className="w-10 h-10" />
       </div>
 
       {/* Floating sparkle emojis */}
       <div className="floaty" aria-hidden>
-        {["💖","🌸","✨","🎀","🦋","💕","🌷","🎈","💞","🌟","🪻","💐"].map((e, i) => (
+        {["💖", "🌸", "✨", "🎀", "🦋", "💕", "🌷", "🎈", "💞", "🌟", "🪻", "💐"].map((e, i) => (
           <span
             key={i}
             style={{
@@ -151,16 +200,16 @@ function Index() {
 
       {/* Main card */}
       <div className="z-10 surprise-card">
-        <span className="step-chip">Question {step + 1} of {QUESTIONS.length}</span>
+        <span className="step-chip">
+          Question {step + 1} of {QUESTIONS.length}
+        </span>
 
         <div key={step} className="q-fade mt-7">
           <div className="mb-4 flex justify-center">
             <div className="h-px w-12 bg-gradient-to-r from-transparent via-rose-300 to-transparent" />
           </div>
 
-          <h1 className="birthday-title text-5xl md:text-6xl px-2">
-            {current.q}
-          </h1>
+          <h1 className="birthday-title text-5xl md:text-6xl px-2">{current.q}</h1>
 
           <div className="relative mt-10 flex flex-col items-center gap-3">
             <button onClick={handleYes} className="btn-yes">
@@ -188,7 +237,13 @@ function Index() {
           )}
         </div>
 
-        <div className="mt-10 flex justify-center"><div className="dot-trio"><span /><span /><span /></div></div>
+        <div className="mt-10 flex justify-center">
+          <div className="dot-trio">
+            <span />
+            <span />
+            <span />
+          </div>
+        </div>
       </div>
     </div>
   );
